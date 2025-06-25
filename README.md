@@ -1,5 +1,4 @@
 <div align="center">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=500&color=2e9fr&center=true&width=435&lines=🧬+Welcome+to+Morphic;Create.+Train.+Morph+AI." alt="Typing SVG" />
   <h1>🧬 Morphic</h1>
   <p><strong>Create. Train. Morph AI.</strong></p>
   <img src="https://img.shields.io/badge/Built%20With-Turborepo-blue?style=flat-square" alt="Built with Turborepo" />
