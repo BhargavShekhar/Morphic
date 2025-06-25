@@ -1,3 +1,42 @@
+# 🌐 Morphic
+
+**Morphic** is a full-stack web application that empowers users to **generate and train custom AI models** based on their own data and prompts. Built on a robust monorepo architecture, Morphic integrates cutting-edge web technologies to deliver a seamless AI model creation and interaction experience.
+
+---
+
+## ✨ Features
+
+- 🧠 Generate high-quality AI-generated content from text prompts
+- 🛠️ Train personalized models using user-provided inputs
+- 🔄 Real-time feedback and status updates through webhook events
+- 🔐 Secure authentication and user management with Clerk
+- 🚀 Monorepo setup with clean frontend-backend separation
+- 💡 Fully typed with TypeScript for a robust development experience
+
+---
+
+## 🛠️ Tech Stack
+
+| Frontend   | Backend    | Auth     | AI Integration | Dev Tools   |
+|------------|------------|----------|----------------|-------------|
+| Next.js    | Express.js | Clerk    | Remote AI API  | Bun / Turbo |
+| TypeScript | REST APIs  | JWT      | Webhooks       | ESM Modules |
+
+---
+
+## 📁 Monorepo Structure
+
+```bash
+morphic/
+├── apps/
+│   ├── web/          # Frontend - Next.js
+│   └── api/          # Backend - Express
+├── packages/
+│   └── shared/       # Shared types and utilities
+├── .env              # Environment variables
+├── turbo.json        # Turborepo config
+└── README.md
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
