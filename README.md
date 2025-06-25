@@ -1,4 +1,16 @@
-# 🌐 Morphic
+<div align="center">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=500&color=2e9fr&center=true&width=435&lines=🧬+Welcome+to+Morphic;Create.+Train.+Morph+AI." alt="Typing SVG" />
+  <h1>🧬 Morphic</h1>
+  <p><strong>Create. Train. Morph AI.</strong></p>
+  <img src="https://img.shields.io/badge/Built%20With-Turborepo-blue?style=flat-square" alt="Built with Turborepo" />
+  <img src="https://img.shields.io/badge/Framework-Next.js-black?style=flat-square" alt="Next.js" />
+  <img src="https://img.shields.io/badge/Backend-Express-green?style=flat-square" alt="Express" />
+  <img src="https://img.shields.io/badge/Auth-Clerk-orange?style=flat-square" alt="Clerk" />
+
+  
+</div>
+
+# 🧬 𝗠𝗢𝗥𝗣𝗛𝗜𝗖
 
 **Morphic** is a full-stack web application that empowers users to **generate and train custom AI models** based on their own data and prompts. Built on a robust monorepo architecture, Morphic integrates cutting-edge web technologies to deliver a seamless AI model creation and interaction experience.
 
@@ -29,12 +41,15 @@
 ```bash
 morphic/
 ├── apps/
-│   ├── web/          # Frontend - Next.js
-│   └── api/          # Backend - Express
+│   ├── web/
+│   └── backend/
 ├── packages/
-│   └── shared/       # Shared types and utilities
-├── .env              # Environment variables
-├── turbo.json        # Turborepo config
+│   └──  common/
+│       ├── db/
+│       ├── typescript-config/
+│       └── ui/
+├── .env 
+├── turbo.json
 └── README.md
 
 # Turborepo starter
