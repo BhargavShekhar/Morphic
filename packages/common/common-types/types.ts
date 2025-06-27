@@ -22,7 +22,7 @@ export const TrainModelSchema = z.object({
         "Gray"
     ]),
     bald: z.boolean(),
-    // images: z.array(z.string())
+    zipUrl: z.string()
 })
 
 export const GenerateImageSchema = z.object({
@@ -34,4 +34,14 @@ export const GenerateImageSchema = z.object({
 export const GenerateImageFromPackSchema = z.object({
     modelId: z.string(),
     packId: z.string()
+})
+
+export const TrainWebHookSchema = z.object({
+    request_id: z.string(),
+    tensor_path: z.string()
+})
+
+export const ImageWebHookSchema = z.object({
+    request_id: z.string(),
+    image_url: z.string()
 })

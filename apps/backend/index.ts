@@ -5,7 +5,7 @@ import generateImageRouter from "./routes/generateImageRouter";
 import userRouter from "./routes/userRouter";
 import generatePackRouter from "./routes/generatePackRouter";
 import getImagesRouter from "./routes/getImagesRoute";
-import FalAIWeebHookRouter from "./routes/falAiWeebHookRouter";
+import FalAIWeebHookRouter from "./routes/falAiWeebHookTrainRouter";
 
 const app = express();
 

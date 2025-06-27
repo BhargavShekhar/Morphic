@@ -17,37 +17,39 @@ model User {
 }
 
 model Model {
-  id             String           @id @default(uuid())
+  id             String                 @id @default(uuid())
   userId         String
+  triggerWord    String?
+  tensorPath     String?
+  traningStatus  ModelTraningStatusEnum @default(PENDING)
+  falAiReqId     String?
   name           String
   type           ModelEnum
   age            Int
   ethinicity     EthinicityEnum
   eyeColor       EyeColorEnum
   bald           Boolean
-  TrainingImages TrainingImages[]
   OutputImage    OutputImage[]
-  createdAt      DateTime         @default(now())
-  updatedAt      DateTime         @updatedAt
-}
+  zipUrl         String
+  createdAt      DateTime               @default(now())
+  updatedAt      DateTime               @updatedAt
 
-model TrainingImages {
-  id       String @id @default(uuid())
-  imageUrl String
-  modelId  String
-  model    Model  @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  @@index([falAiReqId])
 }
 
 model OutputImage {
-  id        String     @id @default(uuid())
-  imageUrl  String     @default("")
-  modelId   String
-  status    StatusEnum @default(PENDING)
-  prompt    String
-  model     Model      @relation(fields: [modelId], references: [id], onDelete: Cascade)
-  userId    String
-  createdAt DateTime   @default(now())
-  updatedAt DateTime   @updatedAt
+  id         String     @id @default(uuid())
+  imageUrl   String     @default("")
+  modelId    String
+  falAiReqId String?
+  status     StatusEnum @default(PENDING)
+  prompt     String
+  model      Model      @relation(fields: [modelId], references: [id], onDelete: Cascade)
+  userId     String
+  createdAt  DateTime   @default(now())
+  updatedAt  DateTime   @updatedAt
+
+  @@index([falAiReqId])
 }
 
 model Packs {
@@ -58,7 +60,7 @@ model Packs {
 
 model PackPrompts {
   id     String @id @default(uuid())
-  prompt  String
+  prompt String
   packId String
   pack   Packs  @relation(fields: [packId], references: [id], onDelete: Cascade)
 }
@@ -67,6 +69,12 @@ enum ModelEnum {
   Man
   Woman
   Others
+}
+
+enum ModelTraningStatusEnum {
+  PENDING
+  COMPLETED
+  FAILED
 }
 
 enum EthinicityEnum {
