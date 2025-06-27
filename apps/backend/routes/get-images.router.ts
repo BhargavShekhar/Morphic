@@ -3,7 +3,7 @@ import { Router } from "express";
 
 const getImagesRouter = Router();
 
-getImagesRouter.get("/images/bulk", async (req, res) => {
+getImagesRouter.get("/", async (req, res) => {
     const imagesId = req.query.images as string[];
     const limit = req.query.limit as string ?? "10";
     const offset = req.query.offset as string ?? "0";

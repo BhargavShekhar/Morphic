@@ -3,7 +3,7 @@ import prismaClient from "@repo/db";
 
 const userRouter = Router();
 
-userRouter.post("/create-user", async (req, res) => {
+userRouter.post("/", async (req, res) => {
     const { username } = req.body;
 
     try {

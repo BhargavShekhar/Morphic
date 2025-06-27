@@ -4,7 +4,7 @@ import { Router } from "express";
 
 const FalAIWeebHookImageRouter = Router();
 
-FalAIWeebHookImageRouter.get("/falai/webhook/image", async (req, res) => {
+FalAIWeebHookImageRouter.get("/", async (req, res) => {
     const parsedData = ImageWebHookSchema.safeParse(req.body);
 
     if (!parsedData.success) {

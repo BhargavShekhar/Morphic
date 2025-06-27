@@ -7,7 +7,7 @@ const traningRouter = Router();
 
 const falAiModel = new FalAIModel();
 
-traningRouter.post("/ai/training", async (req, res) => {
+traningRouter.post("/", async (req, res) => {
     const parsedBody = TrainModelSchema.safeParse(req.body);
     
     if(!parsedBody.success) {

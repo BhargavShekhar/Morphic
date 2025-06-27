@@ -4,7 +4,7 @@ import { Router } from "express";
 
 const FalAIWeebHookTrainRouter = Router();
 
-FalAIWeebHookTrainRouter.get("/falai/webhook/train", async (req, res) => {
+FalAIWeebHookTrainRouter.get("/", async (req, res) => {
     const parsedData = TrainWebHookSchema.safeParse(req.body);
 
     if(!parsedData.success) {
